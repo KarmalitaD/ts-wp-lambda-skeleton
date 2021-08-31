@@ -1,0 +1,33 @@
+{
+  "name": "ts-wp-lambda",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "_mocha --watch --watch-files src/**/*.ts,test/*.ts test/**/*.test.ts",
+    "test:coverage": "nyc ./node_modules/.bin/_mocha 'test/**/*.test.ts'",
+    "build": "webpack --mode=production",
+    "build:analyze": "cross-env ANALYZE=true npm run build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@istanbuljs/nyc-config-typescript": "^1.0.1",
+    "@testdeck/mocha": "^0.1.2",
+    "@types/aws-lambda": "^8.10.83",
+    "@types/chai": "^4.2.21",
+    "chai": "^4.3.4",
+    "cross-env": "^7.0.3",
+    "mocha": "^9.1.1",
+    "nodemon": "^2.0.12",
+    "nyc": "^15.1.0",
+    "ts-loader": "^9.2.5",
+    "ts-node": "^10.2.1",
+    "typescript": "^4.4.2",
+    "webpack": "^5.51.1",
+    "webpack-bundle-analyzer": "^4.4.2",
+    "webpack-cli": "^4.8.0"
+  },
+  "dependencies": {}
+}
