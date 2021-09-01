@@ -25,6 +25,14 @@
 `tsfix` - fixing the code style when possible
 
 
+## Code example
+
+The lambda code has two major parts:
+* `main.ts` - returns lambda factory. It should take all of the dependencies necessary to inject. This factory can be imported directly from tests and used to inject any mocks we need.
+
+* `index.ts` - the main entry point used by webpack for production bundle generation. It takes the lambda factory from the main file, injects all necessary dependencies, and exports the ready-to-deploy handler.
+
+
 ## References
 
 * [Airbnb JavaScript Style Guide](https://github.com/airbnb/javascript)
