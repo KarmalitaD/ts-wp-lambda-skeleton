@@ -28,8 +28,16 @@ module.exports = {
       // },
       {
         test: /\.(ts|tsx)$/,
-        exclude: /node_modules/,
-        use: ['ts-loader'],
+        exclude: [/node_modules/, /test/],
+        use: [{
+          loader: 'ts-loader',
+          options: {
+            reportFiles: [
+              'src/**/*.{ts,tsx}', 
+              '!test/**/*.ts',
+            ]
+          }
+        }],
       },
     ],
   },

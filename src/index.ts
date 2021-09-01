@@ -2,9 +2,9 @@ import {
   APIGatewayProxyHandler,
 } from 'aws-lambda';
 
-/* eslint-disable import/prefer-default-export, no-unused-vars, @typescript-eslint/no-unused-vars */
+import AWS from 'aws-sdk';
 
-export const handler: APIGatewayProxyHandler = async (event, context) => ({
-  statusCode: 200,
-  body: JSON.stringify({ message: 'Success' }),
-});
+import createLambda from './main';
+
+/* eslint-disable-next-line import/prefer-default-export */
+export const handler: APIGatewayProxyHandler = createLambda(AWS);
