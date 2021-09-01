@@ -8,6 +8,7 @@
 * Webpack Bundle Analyzer
 * SonarQube compatible code coverage calculation
 * TypeScript linting (AirBnb code style based)
+* DI
 
 
 ## npm scripts
