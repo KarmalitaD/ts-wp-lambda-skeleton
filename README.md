@@ -11,6 +11,17 @@
 * DI
 
 
+## How to use
+
+```sh
+git clone https://gitlab.com/Hojyman/ts-wp-lambda-skeleton.git
+cd ts-wp-lambda-skeleton
+npm ci
+
+# Now use one of the npm scripts listed in the next section
+
+```
+
 ## npm scripts
 
 `dev` - run TDD development (watch mode)
